@@ -1,3 +1,7 @@
-app/code/community/Goat/Rating app/code/community/Goat/Rating
+app/code/community/Goat/StoreRating app/code/community/Goat/StoreRating
 
-app/etc/modules/Goat_Rating.xml app/etc/modules/Goat_Rating.xml
+app/etc/modules/Goat_StoreRating.xml app/etc/modules/Goat_StoreRating.xml
+
+app/design/frontend/base/default/layout/storerating.xml app/design/frontend/base/default/layout/storerating.xml 
+
+app/design/frontend/base/default/template/storerating app/design/frontend/base/default/template/storerating
