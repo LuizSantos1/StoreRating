@@ -1,10 +1,10 @@
-# Rating
+# Store Rating
 Rating Store by Customer - Magento 1
 
 
 ```
 $ cd /path/to/module
-$ git clone https://github.com/MageGoat/Rating.git
+$ git clone https://github.com/MageGoat/StoreRating.git
 ```
 
 
@@ -26,8 +26,8 @@ magento aceita link simbolico, alterarando no app/etc/config.xml.
 
 de link simbolico para copia.
 ```
-modman deploy --copy Rating
+modman deploy --copy StoreRating
 ```
 
 
-![Mage Goat](https://github.com/MageGoat/Rating/blob/master/goat.gif)
+![Mage Goat](https://github.com/MageGoat/StoreRating/blob/master/goat.gif)
