@@ -29,4 +29,5 @@ de link simbolico para copia.
 modman deploy --copy Rating
 ```
 
+
 ![Mage Goat](https://github.com/MageGoat/Rating/blob/master/goat.gif)

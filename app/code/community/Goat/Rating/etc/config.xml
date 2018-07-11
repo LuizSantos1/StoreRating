@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Magento
+ *
+ *
+ */
+-->
+<config>
+    <modules>
+        <Goat_Rating>
+            <version>1.0.0</version>
+        </Goat_Rating>
+    </modules>
+    <global>
+
+    </global>
+    <frontend>
+        <routers>
+            <rating>
+                <use>standard</use>
+                <args>
+                    <module>Goat_Rating</module>
+                    <frontName>rating</frontName>
+                </args>
+            </rating>
+        </routers>
+    </frontend>
+</config>

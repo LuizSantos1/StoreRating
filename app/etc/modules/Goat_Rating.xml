@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Goat_Rating>
+            <active>true</active>
+            <codePool>community</codePool>
+        </Goat_Rating>
+    </modules>
+</config>
