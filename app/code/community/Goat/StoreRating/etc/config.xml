@@ -13,7 +13,27 @@
         </Goat_StoreRating>
     </modules>
     <global>
-
+        <models>
+            <storerating>
+                <class>Goat_StoreRating_Model</class>
+                <resourceModel>storerating_resource</resourceModel>
+            </storerating>
+            <storerating_resource>
+                <class>Goat_StoreRating_Model_Resource</class>
+                <entities>
+                    <rating>
+                        <table>storerating_rating</table>
+                    </rating>
+                </entities>
+            </storerating_resource>
+        </models>
+        <resources>
+            <storerating_setup>
+                <setup>
+                    <module>Goat_StoreRating</module>
+                </setup>
+            </storerating_setup>
+        </resources>
     </global>
     <frontend>
         <routers>
