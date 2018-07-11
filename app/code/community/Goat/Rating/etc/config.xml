@@ -8,9 +8,9 @@
 -->
 <config>
     <modules>
-        <Goat_Rating>
+        <Goat_StoreRating>
             <version>1.0.0</version>
-        </Goat_Rating>
+        </Goat_StoreRating>
     </modules>
     <global>
 
@@ -20,7 +20,7 @@
             <storerating>
                 <use>standard</use>
                 <args>
-                    <module>Goat_Rating</module>
+                    <module>Goat_StoreRating</module>
                     <frontName>storerating</frontName>
                 </args>
             </storerating>

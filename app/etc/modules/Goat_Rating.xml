@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <config>
     <modules>
-        <Goat_Rating>
+        <Goat_StoreRating>
             <active>true</active>
             <codePool>community</codePool>
-        </Goat_Rating>
+        </Goat_StoreRating>
     </modules>
 </config>
