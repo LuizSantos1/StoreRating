@@ -17,13 +17,13 @@
     </global>
     <frontend>
         <routers>
-            <rating>
+            <storerating>
                 <use>standard</use>
                 <args>
                     <module>Goat_Rating</module>
-                    <frontName>rating</frontName>
+                    <frontName>storerating</frontName>
                 </args>
-            </rating>
+            </storerating>
         </routers>
     </frontend>
 </config>
