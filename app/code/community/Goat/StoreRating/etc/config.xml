@@ -34,6 +34,16 @@
                 </setup>
             </storerating_setup>
         </resources>
+        <helpers>
+            <storerating>
+                <class>Goat_StoreRating_Helper</class>
+            </storerating>
+        </helpers>
+        <blocks>
+            <storerating>
+                <class>Goat_StoreRating_Block</class>
+            </storerating>
+        </blocks>
     </global>
     <frontend>
         <routers>

@@ -1,0 +1,47 @@
+<?php 
+	$storeRatings = $this->getLoadedStoreRatingCollection();
+ ?>
+
+<div class="row">
+  <div class="col-sm-7">
+    <hr/>
+    <div class="review-block">
+    	<?php foreach ($storeRatings as $_rating): ?>
+    		<?php #var_dump($_rating->getData()) ?>
+		    <div class="row">
+		        <div class="col-sm-3">
+		          <img src="http://dummyimage.com/60x60/666/ffffff&text=No+Image" class="img-rounded">
+		          <div class="review-block-name"><a href="#"><?php echo $this->escapeHtml($_rating->getCustomerName())  ?></a></div>
+		          <div class="review-block-date"><?php echo $this->formatDate($_rating->getCreatedAt(), 'long') ?></div>
+		        </div>
+		        
+		        stars: <?php echo $_rating->getStars(); ?>
+
+		        <div class="col-sm-9">
+		          <div class="review-block-rate">
+		            <button type="button" class="btn btn-warning btn-xs" aria-label="Left Align">
+		              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+		            </button>
+		            <button type="button" class="btn btn-warning btn-xs" aria-label="Left Align">
+		              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+		            </button>
+		            <button type="button" class="btn btn-warning btn-xs" aria-label="Left Align">
+		              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+		            </button>
+		            <button type="button" class="btn btn-default btn-grey btn-xs" aria-label="Left Align">
+		              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+		            </button>
+		            <button type="button" class="btn btn-default btn-grey btn-xs" aria-label="Left Align">
+		              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+		            </button>
+		          </div>
+		          <div class="review-block-title"><?php echo nl2br($this->escapeHtml($_rating->getTitle())) ?></div>
+		          <div class="review-block-description"><?php echo nl2br($this->escapeHtml($_rating->getText())) ?></div>
+		        </div>
+		    </div>
+		<hr/>
+    	<?php endforeach ?>
+
+    </div>
+  </div>
+</div>

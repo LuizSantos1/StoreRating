@@ -25,7 +25,9 @@
             <action method="setTemplate"><template>page/1column.phtml</template></action>
         </reference>
         <reference name="content">
-            <block type="core/template" name="store.rating" template="storerating/store.phtml" />
+            <block type="core/template" name="store.rating" template="storerating/store.phtml">
+                <block type="storerating/rating_list" name="rating.list" template="storerating/rating/list.phtml" />
+            </block>
         </reference>
     </storerating_index_index>
 

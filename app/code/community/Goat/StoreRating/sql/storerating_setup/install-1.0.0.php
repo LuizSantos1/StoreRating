@@ -29,6 +29,10 @@ $storeRating = $installer->getConnection()
         'nullable'  => true,
         ), 'customer id send a rating')
 
+    ->addColumn('customer_name', Varien_Db_Ddl_Table::TYPE_TEXT, 32, array(
+        'nullable'  => true,
+        ), 'customer Name')
+
     ->addColumn('stars', Varien_Db_Ddl_Table::TYPE_INTEGER, 10, array(
         'nullable'  => true,
         ), 'stars quantity')
@@ -57,8 +61,8 @@ $storeRating = $installer->getConnection()
     ->addColumn('status', Varien_Db_Ddl_Table::TYPE_TEXT, 32, array(
         ), 'Status')
 
-    ->addIndex($installer->getIdxName('storerating/rating', array('status')),
-        array('status'))
+    ->addIndex($installer->getIdxName('storerating/rating', array('stars')),
+        array('stars'))
     
     ->addIndex($installer->getIdxName('storerating/rating', array('customer_id')),
         array('customer_id'));

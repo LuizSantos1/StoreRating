@@ -14,7 +14,10 @@ $customerSession = Mage::getSingleton('customer/session');
     <?php echo $this->getMessagesBlock()->toHtml() ?>
     <form action="<?php echo $this->getUrl('*/*/postRating') ?>" method="post" id="rating-validate-detail">
     	<?php echo $this->getBlockHtml('formkey') ?>
-    	<input type="hidden" name="customer_id" value="<?php echo $customerSession->getCustomer()->getId() ?>">
+
+        <input type="hidden" name="customer_id" value="<?php echo $customerSession->getCustomer()->getId() ?>">
+    	<input type="hidden" name="customer_name" value="<?php echo $customerSession->getCustomer()->getName() ?>">
+        
         <div class="block-content">
         	<br />
             <div class="form-storerating">
