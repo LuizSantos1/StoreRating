@@ -1,66 +1,53 @@
-.storerating {
-    display: inline-block;
-    position: relative;
-    height: 50px;
-    line-height: 50px;
-    font-size: 50px;
-  }
-  
-  .storerating label {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    cursor: pointer;
-    font-size: 50px;
-  }
-  
-  .storerating label:last-child {
-    position: static;
-  }
-  
-  .storerating label:nth-child(1) {
-    z-index: 5;
-  }
-  
-  .storerating label:nth-child(2) {
-    z-index: 4;
-  }
-  
-  .storerating label:nth-child(3) {
-    z-index: 3;
-  }
-  
-  .storeratingting label:nth-child(4) {
-    z-index: 2;
-  }
-  
-  .storerating label:nth-child(5) {
-    z-index: 1;
-  }
-  
-  .storerating label input {
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-  }
-  
-  .storerating label .icon {
-    float: left;
-    color: transparent;
-  }
-  
-  .storerating label:last-child .icon {
-    color: #000;
-  }
-  
-  .storerating:not(:hover) label input:checked ~ .icon,
-  .storerating:hover label:hover input ~ .icon {
-    color: #09f;
-  }
-  
-  .storerating label input:focus:not(:checked) ~ .icon:last-child {
-    color: #000;
-    text-shadow: 0 0 5px #09f;
-  }
+.rating {
+  overflow: hidden;
+  display: inline-block;
+}
+
+.rating-input {
+  float: right;
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  margin: 0 0 0 -16px;
+  opacity: 0;
+}
+
+.rating-star {
+  position: relative;
+  float: right;
+  display: block;
+  width: 16px;
+  height: 16px;
+  background: url('../../images/storerating/star.png') 0 -16px;
+  cursor: pointer;
+}
+
+
+.rating-star:hover,
+.rating-star:hover ~ .rating-star,
+.rating-input:checked ~ .rating-star {
+  background-position: 0 0;
+}
+
+.rating-average {
+  width: 224px;
+  position: relative;
+  color: gray;
+  font-size: 50px;
+}
+.rating-average::before { 
+  content: "★★★★★" 
+}
+
+
+.rating-fill-active {
+  font-size: 50px;
+  color: orange;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.rating-fill-active::before { 
+  content: "★★★★★" 
+}

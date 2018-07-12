@@ -1,32 +1,26 @@
-<form class="storerating">
-  <label>
-    <input type="radio" name="stars" value="1" />
-    <span class="icon">★</span>
-  </label>
-  <label>
-    <input type="radio" name="stars" value="2" />
-    <span class="icon">★</span>
-    <span class="icon">★</span>
-  </label>
-  <label>
-    <input type="radio" name="stars" value="3" />
-    <span class="icon">★</span>
-    <span class="icon">★</span>
-    <span class="icon">★</span>   
-  </label>
-  <label>
-    <input type="radio" name="stars" value="4" />
-    <span class="icon">★</span>
-    <span class="icon">★</span>
-    <span class="icon">★</span>
-    <span class="icon">★</span>
-  </label>
-  <label>
-    <input type="radio" name="stars" value="5" />
-    <span class="icon">★</span>
-    <span class="icon">★</span>
-    <span class="icon">★</span>
-    <span class="icon">★</span>
-    <span class="icon">★</span>
-  </label>
-</form>
+
+<span class="rating">  
+  <?php for ($i=5; $i >= 1; $i--): ?>
+    <input type="radio" val="<?php echo $i?>" class="rating-input" id="rating-input-1-<?php echo $i?>" name="rating-input-1">
+    <label for="rating-input-1-<?php echo $i?>" class="rating-star"></label>
+  <?php endfor;?>
+</span>
+
+<hr>
+
+<input onkeyup="rating(this.value)" value="0"> 
+<p>
+<div class="rating-average">
+<div id="rating1" class="rating-fill-active"></div>
+</div>  
+
+
+<script>
+  var cw = window.rating1.clientWidth; // save original 100% pixel width
+
+  function rating( stars ) {
+    window.rating1.style.width = Math.round(cw * (stars / 5)) + 'px';
+  }
+
+rating(0);
+</script>
