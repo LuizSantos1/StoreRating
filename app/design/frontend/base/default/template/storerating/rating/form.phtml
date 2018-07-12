@@ -1,0 +1,78 @@
+<?php
+/**
+ * Magento
+ */
+?>
+<?php 
+$customerSession = Mage::getSingleton('customer/session');
+?>
+<div class="block block-storerating">
+    <div class="block-title">
+        <strong><span><?php echo $this->__('Store Rating') ?></span></strong>
+    </div>
+
+    <?php echo $this->getMessagesBlock()->toHtml() ?>
+    <form action="<?php echo $this->getUrl('*/*/postRating') ?>" method="post" id="rating-validate-detail">
+    	<?php echo $this->getBlockHtml('formkey') ?>
+    	<input type="hidden" name="customer_id" value="<?php echo $customerSession->getCustomer()->getId() ?>">
+        <div class="block-content">
+        	<br />
+            <div class="form-storerating">
+        	 	<label for="storerating"><?php echo $this->__('Stars:') ?></label>
+        	 	<div class="input-box">
+		        	<span class="rating">
+					  <?php for ($i=5; $i >= 1; $i--): ?>
+					    <input type="radio" value="<?php echo $i?>" class="rating-input" id="rating-input-1-<?php echo $i?>" name="stars">
+					    <label for="rating-input-1-<?php echo $i?>" class="rating-star"></label>
+					  <?php endfor;?>
+					</span>
+				</div>
+			</div>
+
+        	<br />
+        	
+            <div class="form-storerating">
+                <label for="storerating"><?php echo $this->__('Title:') ?></label>
+	            <div class="input-box">
+	               <input type="text" name="title" id="title" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Title')) ?>" class="input-text required-entry" />
+	            </div>
+            </div>
+
+        	<br />
+        	
+            <div class="form-storerating">
+                <label for="storerating"><?php echo $this->__('Text:') ?></label>
+	            <div class="input-box">
+	                <textarea name="text" id="text-rating" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Text')) ?>" class="required-entry input-text" cols="5" rows="3"></textarea>
+	            </div>
+            </div>
+
+        	<br />
+        	
+            <div class="form-storerating">
+                <label for="storerating"><?php echo $this->__('Dog Name:') ?></label>
+	            <div class="input-box">
+	               <input type="text" name="dog_name" id="dog_name" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Dog Name')) ?>" class="input-text required-entry" />
+	            </div>
+            </div>
+
+        	<br />
+        	
+            <div class="form-storerating">
+                <label for="storerating"><?php echo $this->__('Photo:') ?></label>
+	            <div class="input-box">
+	               <input type="text" name="photo" id="photo" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Photo')) ?>" class="input-text required-entry" />
+	            </div>
+            </div>
+
+            <div class="actions">
+                <button type="submit" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Subscribe')) ?>" class="button"><span><span><?php echo $this->__('Submit Rating') ?></span></span></button>
+            </div>
+        </div>
+    </form>
+    <script type="text/javascript">
+    //<![CDATA[
+        var storeRatingFormDetail = new VarienForm('rating-validate-detail');
+    //]]>
+    </script>
+</div>

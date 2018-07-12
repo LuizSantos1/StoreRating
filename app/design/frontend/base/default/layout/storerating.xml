@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Magento
+ */
+-->
 <layout version="0.1.0">
+
     <storerating_index_index>
         <reference name="head">
             <action method="addItem"><type>skin_css</type><name>css/storerating/ratings.css</name></action>
@@ -11,4 +17,13 @@
             <block type="core/template" name="store.rating" template="storerating/store.phtml" />
         </reference>
     </storerating_index_index>
+
+    <storerating_store_index>
+        <reference name="root">
+            <action method="setTemplate"><template>page/1column.phtml</template></action>
+        </reference>
+        <reference name="content">
+            <block type="core/template" name="store.rating.form" template="storerating/rating/form.phtml" />
+        </reference>
+    </storerating_store_index>
 </layout>
