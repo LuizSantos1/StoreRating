@@ -15,6 +15,9 @@ class Goat_StoreRating_IndexController extends Mage_Core_Controller_Front_Action
 {
 	public function indexAction()
 	{
-		die("It's a Live!");
+		$this->loadLayout();
+			$this->_initLayoutMessages('customer/session');
+			$this->_initLayoutMessages('catalog/session');
+		$this->renderLayout();
 	}
 }

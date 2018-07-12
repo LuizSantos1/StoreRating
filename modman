@@ -5,3 +5,7 @@ app/etc/modules/Goat_StoreRating.xml app/etc/modules/Goat_StoreRating.xml
 app/design/frontend/base/default/layout/storerating.xml app/design/frontend/base/default/layout/storerating.xml 
 
 app/design/frontend/base/default/template/storerating app/design/frontend/base/default/template/storerating
+
+skin/frontend/base/default/css/storerating skin/frontend/base/default/css/storerating
+
+skin/frontend/base/default/images/storerating skin/frontend/base/default/images/storerating

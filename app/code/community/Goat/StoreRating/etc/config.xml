@@ -25,5 +25,12 @@
                 </args>
             </storerating>
         </routers>
+        <layout>
+            <updates>
+                <vet module="Goat_StoreRating">
+                    <file>storerating.xml</file>
+                </vet>
+            </updates>
+        </layout>
     </frontend>
 </config>
