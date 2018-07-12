@@ -30,4 +30,22 @@ modman deploy --copy StoreRating
 ```
 
 
+#@TABLES
+
+tabela storerating_brief
+	
+	rating_id
+	customer_id *
+	stars
+	title
+	text
+	dog_name 
+	photo_path
+	status
+	create-at 
+	update_at
+
+DROP TABLE `storerating_rating`;
+DELETE FROM `core_resource` WHERE `core_resource`.`code` = 'storerating_setup';
+
 ![Mage Goat](https://github.com/MageGoat/StoreRating/blob/master/goat.gif)
