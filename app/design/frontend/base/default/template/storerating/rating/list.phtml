@@ -2,12 +2,16 @@
 	$storeRatings = $this->getLoadedStoreRatingCollection();
  ?>
 
+<style type="text/css">
+.pages li {
+    float: left;
+}
+</style>
 <div class="row">
   <div class="col-sm-7">
     <hr/>
     <div class="review-block">
     	<?php foreach ($storeRatings as $_rating): ?>
-    		<?php #var_dump($_rating->getData()) ?>
 		    <div class="row">
 		        <div class="col-sm-3">
 		          <img src="http://dummyimage.com/60x60/666/ffffff&text=No+Image" class="img-rounded">
@@ -42,6 +46,23 @@
 		<hr/>
     	<?php endforeach ?>
 
+    	<div class="pages">
+    		<ol>
+    			<?php if ($storeRatings->getCurPage() > 1): ?>
+	    			<li>
+	    				<a href="<?php echo $this->getPageUrl($storeRatings->getCurPage() - 1) ?>">Back</a>
+	    			</li>
+    			<?php endif ?>
+
+    			<li class="current"><?php echo $storeRatings->getCurPage() ?></li>
+
+    			<?php if ($storeRatings->getCurPage() < $this->getTotalPages()): ?>	
+	    			<li>
+	    				<a href="<?php echo $this->getPageUrl($storeRatings->getCurPage() + 1) ?>">Next:</a>
+	    			</li>
+    			<?php endif ?>
+    		</ol>
+    	</div>
     </div>
   </div>
 </div>
